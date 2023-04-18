@@ -54,7 +54,7 @@ app.post("/Account/v1.1/Mb/Register/Registration", async (req, res) => {
 
 async function getCaptcha(headers, body) {
     try {
-        const resp =  await axios.post(REAL_REQUEST_URL, body, { headers , proxy});
+        const resp =  await axios.post(REAL_REQUEST_URL, body, { headers});
 
         return resp;
     } catch (error) {
@@ -64,7 +64,7 @@ async function getCaptcha(headers, body) {
 
 async function reg(headers, body) {
     try {
-        return await axios.post(REAL_REG__REQUEST_URL, body, { headers, proxy });
+        return await axios.post(REAL_REG__REQUEST_URL, body, { headers });
     } catch (error) {
         return error;
     }
